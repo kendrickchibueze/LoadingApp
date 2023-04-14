@@ -133,12 +133,19 @@ class NotificationSender(private val context: Context, private val notification:
             putExtra("status", notification.status)
             putExtra("filename", notification.projectName)
         }
-        val contentPendingIntent = PendingIntent.getActivity(
+       /* val contentPendingIntent = PendingIntent.getActivity(
             context,
             123,
             contentIntent,
             PendingIntent.FLAG_UPDATE_CURRENT
+        )*/
+        val contentPendingIntent = PendingIntent.getActivity(
+            context,
+            123,
+            contentIntent,
+            PendingIntent.FLAG_IMMUTABLE
         )
+
 
         val builder = NotificationCompat.Builder(
             context,
