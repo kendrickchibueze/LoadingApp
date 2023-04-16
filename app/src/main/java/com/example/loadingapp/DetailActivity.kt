@@ -1,15 +1,19 @@
 package com.example.loadingapp
 
 import android.os.Bundle
-import android.widget.ImageButton
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var statusTextView: TextView
     private lateinit var fileNameTextView: TextView
-    private lateinit var backButton: ImageButton
+    //private lateinit var backButton: Button
+    private lateinit var backButton: AppCompatButton
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

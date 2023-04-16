@@ -131,7 +131,9 @@ class NotificationSender(private val context: Context, private val notification:
         createChannel("channel_id", "notification_channel")
         val contentIntent = Intent(context, DetailActivity::class.java).apply {
             putExtra("status", notification.status)
-            putExtra("filename", notification.projectName)
+            //putExtra("filename", notification.projectName)
+            putExtra("file_name", notification.projectName)
+
         }
        /* val contentPendingIntent = PendingIntent.getActivity(
             context,
